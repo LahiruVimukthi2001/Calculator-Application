@@ -7,5 +7,42 @@
 </head>
 <body>
 
+
+<div class="calculator">
+    <div class="top-bar"><center>PHP Calculator</center></div>
+    <div class="display" id="display">0</div>
+
+    <div class="buttons">
+        <button onclick="clearDisplay()" class="red">C</button>
+        <button onclick="appendToDisplay('(')">(</button>
+        <button onclick="appendToDisplay(')')">)</button>
+        <button onclick="appendToDisplay('/')" class="blue">/</button>
+
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')" class="blue">×</button>
+
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')" class="blue">−</button>
+
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')" class="blue">+</button>
+
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="deleteLast()">⌫</button>
+        <button onclick="calculate()" class="green">=</button>
+    </div>
+
+    
+</div>
+
+
+
 </body>
 </html>
