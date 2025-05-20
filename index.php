@@ -39,6 +39,20 @@
         <button onclick="calculate()" class="green">=</button>
     </div>
 
+    <div class="history">
+        <h4>Calculation History</h4>
+        <div id="history">
+            <?php
+            if (file_exists('history.txt')) {
+                echo nl2br(file_get_contents('history.txt'));
+            }
+            ?>
+        </div>
+        <button onclick="clearHistory()" 
+                class="red" style="margin-top: 5px; width:100%; ">Clear History</button>
+    </div>
+
+
     
 </div>
 
