@@ -50,11 +50,52 @@
         </div>
         <button onclick="clearHistory()" 
                 class="red" style="margin-top: 5px; width:100%; ">Clear History</button>
-    </div>
-
-
-    
+    </div>    
 </div>
+
+<script>
+    function appendToDisplay(value) {
+        const display = document.getElementById('display');
+        if (display.innerText === '0') {
+            display.innerText = value;
+        } else {
+            display.innerText += value;
+        }
+    }
+
+    function clearDisplay() {
+        document.getElementById('display').innerText = '0';
+    }
+
+    function deleteLast() {
+        const display = document.getElementById('display');
+        display.innerText = display.innerText.slice(0, -1) || '0';
+    }
+
+    function calculate() {
+        const expression = document.getElementById('display').innerText;
+        fetch('evaluate.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: 'expression=' + encodeURIComponent(expression)
+        })
+        .then(res => res.text())
+        .then(result => {
+            document.getElementById('display').innerText = result;
+            fetch('history.txt')
+                .then(res => res.text())
+                .then(history => {
+                    document.getElementById('history').innerHTML = history.replace(/\n/g, "<br>");
+                });
+        });
+    }
+
+    function clearHistory() {
+        fetch('clear_history.php', { method: 'POST' })
+            .then(() => document.getElementById('history').innerHTML = '');
+    }
+</script>
+
 
 
 
