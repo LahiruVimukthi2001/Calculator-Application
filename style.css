@@ -6,3 +6,12 @@ body {
     padding-top: 50px;
     margin: 0;
 }
+
+.calculator {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 340px;
+    overflow: hidden;
+    max-width: 90%;
+}
