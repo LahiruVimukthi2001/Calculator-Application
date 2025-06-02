@@ -67,3 +67,12 @@ button.blue {
     background-color: #6369f7;
     color: white;
 }
+
+.history {
+    background-color: #f1f1f1;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+    height: 100px;
+    overflow-y: auto;
+}
