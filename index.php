@@ -7,7 +7,6 @@
 </head>
 <body>
 
-
 <div class="calculator">
     <div class="top-bar"><center>PHP Calculator</center></div>
     <div class="display" id="display">0</div>
@@ -95,9 +94,6 @@
             .then(() => document.getElementById('history').innerHTML = '');
     }
 </script>
-
-
-
 
 </body>
 </html>
